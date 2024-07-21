@@ -1,15 +1,22 @@
 def main():
+    
     amount = 50
     print(f"Amount due: {amount}")
-    while True:
-        coins = input("Insert Coin: ")
+    accepted_coins = [5, 10, 25]
+    while amount > 0:
 
-        if coins == 5 or coins == 10 or coins == 25:
-            amount_due = 50 - coins
-            print(f"Amount due: {amount_due}")
+        coins = int(input("Insert Coin: "))
+
+        if coins in accepted_coins:
+            amount -= coins 
+            if amount > 0:
+                print(f"Amount due: {amount}")
+            else:
+                print("Change owed:", abs(amount))
 
 
-            
-        coins = input("Insert Coin: ")
+        else:
+            print(f"Amount due: {amount}")
+        
 
 main()

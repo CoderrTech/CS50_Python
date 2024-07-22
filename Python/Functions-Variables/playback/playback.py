@@ -9,4 +9,3 @@ output = '...'.join(words)
 
 # print the final string
 print(output)                        
-
